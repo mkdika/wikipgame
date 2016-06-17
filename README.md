@@ -9,3 +9,6 @@ Wikipedia Philosophy Game
 ## Installation ##
 
 ## Note ##
+
+## Usefull Links ##
+[Deploying Spring Boot Apps to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)
