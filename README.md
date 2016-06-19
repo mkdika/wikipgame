@@ -1,4 +1,4 @@
-# zkmvvmcrud #
+# Wikipgame #
 Wikipedia Philosophy Game
 
 ## Version & Changes:##
