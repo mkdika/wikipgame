@@ -1,4 +1,4 @@
-# Wikipgame #
+### Wikipgame ###
 Wikipedia Philosophy Game
 
 ## Version & Changes:##
@@ -11,4 +11,5 @@ Wikipedia Philosophy Game
 ## Note ##
 
 ## Usefull Links ##
+
 [Deploying Spring Boot Apps to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)
