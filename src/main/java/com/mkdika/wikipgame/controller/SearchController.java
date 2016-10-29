@@ -37,7 +37,7 @@ public class SearchController {
             title = searchterm.getTitle().replace("_", " ");
             link = WIKIPEDIA_EN_NORMAL + title;
             nodes.add(title.toLowerCase());
-
+            
             if (title.equalsIgnoreCase("philosophy")) {
                 nodes.clear();
                 return responseNode = new ResponseNode(2, "Done! reach the Philosophy", title, link, nextTitle, nextLink);
