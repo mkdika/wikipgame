@@ -14,8 +14,7 @@ Wikipedia Philosophy Game
 - Wikipedia API
 
 ## Live Demo ##
-Currently live [Demo](http://wikip.mkdika.com) is hosting on PaaS [Heroku.com](https://www.heroku.com/).
+Currently live [Demo](http://wikip.mkdika.com) is hosting on PaaS [Heroku.com](https://www.heroku.com/)
 
 ## Usefull Links ##
-
 [Deploying Spring Boot Apps to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)
