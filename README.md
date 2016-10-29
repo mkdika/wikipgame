@@ -13,6 +13,9 @@ Wikipedia Philosophy Game
 - D3.Js
 - Wikipedia API
 
+## Demo ##
+Currently live [Demo](http://wikip.mkdika.com) is hosting on PaaS [Heroku.com](https://www.heroku.com/).
+
 ## Usefull Links ##
 
 [Deploying Spring Boot Apps to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)
