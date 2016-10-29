@@ -3,8 +3,6 @@ Wikipedia Philosophy Game
 
 ![Imgur](http://i.imgur.com/BeQamd9.png)
 
-![Imgur](http://i.imgur.com/iZyXvw7.png)
-
 ## Version & Changes:##
 17 Jun 2016 (initial version)
 
