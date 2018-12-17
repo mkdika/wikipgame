@@ -150,6 +150,7 @@
                 link.enter().append("line").attr("class", "link");
                 link.exit().remove();
                 node = node.data(force.nodes());
+
                 node.enter().append("g")
                         .attr("class", "node")
                         .call(force.drag);
@@ -166,6 +167,7 @@
                         .append("text")
                         .attr("x", 11)
                         .attr("dy", ".35em")
+                        .attr("style", "font-size:20px")
                         .attr("text-anchor", "start")
                         .text(function (d) {
                             return d.name;
@@ -176,12 +178,15 @@
 
             jQuery(document).ready(function ($) {
                 $("#search-form").submit(function (event) {
+                    $("#title").prop("disabled", true);
                     counter = 0;
 
                     fnet.nodes.splice(0, fnet.nodes.length);
                     fnet.links.splice(0, fnet.links.length);
                     nodes.splice(0, nodes.length);
                     links.splice(0, links.length);
+                   
+
                     UpdateGraph();
 
                     // Prevent the form from submitting via the browser.
@@ -204,15 +209,15 @@
                     dataType: 'json',
                     timeout: 100000,
                     success: function (data) {
-                        console.log("SUCCESS: ", data);
+//                        console.log("SUCCESS: ", data);
                         display(data);
                     },
                     error: function (e) {
-                        console.log("ERROR: ", e);
+//                        console.log("ERROR: ", e);
                         display(e);
                     },
                     done: function (e) {
-                        console.log("DONE");
+//                        console.log("DONE");
                         enableSearchButton(true);
                     }
                 });
@@ -221,13 +226,9 @@
 
             function display(data) {
                 $("#term").val("");
-
-                //                var json = "<h4>Ajax Response</h4><pre>"
-                //                        + JSON.stringify(data, null, 4) + "</pre>";
-                //                $('#feedback').html(json);
-
                 if ($(data).attr('code') == 0) {
                     toastr.info($(data).attr('errmsg'));
+                    $("#title").prop("disabled", false);
                 } else if ($(data).attr('code') == 1) {
                     fnet.nodes.push(
                             {"name": $(data).attr('title'), "url": $(data).attr('url'), "group": counter}
@@ -255,13 +256,11 @@
                                 {"source": (counter - 1), "target": counter}
                         );
                     }
-
+                    
                     UpdateGraph();
                     toastr.info($(data).attr('errmsg'));
+                    $("#title").prop("disabled", false);
                 }
-//                                var json2 = "<h4>Fnet Response</h4><pre>"
-//                                        + JSON.stringify(fnet, null, 4) + "</pre>";
-//                                $('#feedbackFnet').html(json2);
             }
         </script>
     </body> 
